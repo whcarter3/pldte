@@ -1,0 +1,22 @@
+{
+  "name": "playdate site",
+  "description": "A site for playdate",
+  "main": "index.html",
+  "authors": [
+    "William Carter"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
