@@ -1,3 +1,6 @@
 body{
-	background: dodgerblue;
+	background-image: linear-gradient(to bottom, $main-color, $main-color-second);
+	height: 100vh;
+	padding-top: 5vh;
+	overflow-x: hidden;
 }
