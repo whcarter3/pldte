@@ -6,7 +6,7 @@ $(document).ready(function(){
 		return this.id.match(/pd-logo-\d/)
 	});
 	var $numLogos2up = $('#main-logo img').filter(function(){
-		return this.id.match(/pd-logo-[2-4]/)
+		return this.id.match(/pd-logo-[234]/)
 	});
 	var $numLogos3up = $('#main-logo img').filter(function(){
 		return this.id.match(/pd-logo-[34]/)
@@ -52,7 +52,7 @@ $(document).ready(function(){
 	var navOffset 	= $navbar.offset().top;
 
 	$navbar.wrap('<div class="nav-placeholder"></div>')
-	$('.nav-placeholder').height($navbar.outerHeight());
+	$('.nav-placeholder').height($navbar.outerHeight()).css({'margin-bottom':'40px'});
 
 	//calculate scroll position on page
 	$(window).scroll(function(){
