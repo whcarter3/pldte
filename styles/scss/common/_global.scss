@@ -1,7 +1,6 @@
 body{
 	background-image: linear-gradient(to bottom, $main-color, $main-color-second);
-	min-height: 100vh;
-	height: 100%;
-	padding-top: 5vh;
+	height: 300vh;
+	width: 100vw;
 	overflow-x: hidden;
 }
