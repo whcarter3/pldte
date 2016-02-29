@@ -14,10 +14,11 @@ $(document).ready(function(){
 	var $numLogos4up = $('#main-logo img').filter(function(){
 		return this.id.match(/pd-logo-4/)
 	});
+	var $backflip = $('#backflip');
 
 	var logoAnimate = TweenMax.to($mainLogo, 1, {
 		left: 0,
-		ease: Back.easeInOut,
+		ease: Power1.easeInOut,
 		delay: 2
 	});
 
@@ -45,23 +46,29 @@ $(document).ready(function(){
 		delay: 3.9
 	});
 
+	var backFlipAnim = TweenMax.to($backflip, .3, {
+		opacity: 1,
+		ease: Power1.ease,
+		delay: 4.3
+	})
+
 	//Scroll to fixed nav
 
 	//position of navbar
-	var $navbar 	= $('.navbar-default');
-	var navOffset 	= $navbar.offset().top;
+	// var $navbar 	= $('.navbar-default');
+	// var navOffset 	= $navbar.offset().top;
 
-	$navbar.wrap('<div class="nav-placeholder"></div>')
-	$('.nav-placeholder').height($navbar.outerHeight()).css({'margin-bottom':'40px'});
+	// $navbar.wrap('<div class="nav-placeholder"></div>')
+	// $('.nav-placeholder').height($navbar.outerHeight()).css({'margin-bottom':'40px'});
 
-	//calculate scroll position on page
-	$(window).scroll(function(){
-		var scrollPos = $(window).scrollTop();
+	// //calculate scroll position on page
+	// $(window).scroll(function(){
+	// 	var scrollPos = $(window).scrollTop();
 
-		if(scrollPos >= navOffset){
-			$navbar.addClass('fixed');
-		} else {
-			$navbar.removeClass('fixed');
-		}
-	});
+	// 	if(scrollPos >= navOffset){
+	// 		$navbar.addClass('fixed');
+	// 	} else {
+	// 		$navbar.removeClass('fixed');
+	// 	}
+	// });
 });

@@ -1,6 +1,7 @@
 body{
-	background-image: linear-gradient(to bottom, $main-color, $main-color-second);
 	height: 300vh;
-	width: 100vw;
 	overflow-x: hidden;
+	position: relative;
+	background-image: url('/images/penguin-glitch.jpg');
+	// background-size: cover;
 }

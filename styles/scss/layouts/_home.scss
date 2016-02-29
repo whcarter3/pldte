@@ -1,7 +1,6 @@
 header{
-	padding-top: 5vh;
+	padding-top: 2vh;
 	height: 100vh;
-	width: 100vw;
 	overflow-x: hidden;
 	#main-logo{
 		position: relative;
@@ -10,6 +9,32 @@ header{
 			position: absolute;
 			top: 0;
 			left: 0;
+		}
+	}
+}
+
+header, main{
+	background-color: white;
+}
+
+#backflip {
+	padding-top: 30vh;
+	opacity: 0;
+}
+
+.social-nav{
+	margin-top: 15%;
+}
+
+#social-icons{
+	position: relative;
+	left: 50%;
+	transform: translateX(-60%);
+	font-size: 60px;
+	li{
+		padding: 10px 40px;
+		a{
+			color: $main-color-second;
 		}
 	}
 }
