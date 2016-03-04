@@ -17,6 +17,10 @@ header, main{
 	background-color: white;
 }
 
+header + main {
+	margin-top: 80px
+}
+
 #backflip {
 	padding-top: 25vh;
 	opacity: 0;
@@ -36,5 +40,11 @@ header, main{
 		a{
 			color: $main-color-second;
 		}
+	}
+}
+
+#instafeed{
+	img{
+		// margin-bottom: 30px;
 	}
 }

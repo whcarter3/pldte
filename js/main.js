@@ -52,23 +52,30 @@ $(document).ready(function(){
 		delay: 4.3
 	})
 
-	//Scroll to fixed nav
+	//Instagram feed
+	var feed = new Instafeed({
+		get: 'user',
+		userId: '905810418',
+		clientId: '2f8c1f8533c74a7b9b5b90ada82d9d54',
+		filter: function(image){
+		  if (image.type == 'image'){
+		    image.template = '<img src="{{image}}" alt="{{caption}}" class="img-responsive">';
+		  } else {
+		    image.template = '<video width="100%" controls loop><source src="' + image.videos.standard_resolution.url + '" type="video/mp4"/></video>';
+		  }
+		  return true;
+		},
+		template: '<figure>{{model.template}}</figure>',
+		resolution: 'low_resolution',
+		after: function(){
+			var instafeed = $('#instafeed').imagesLoaded(function(){
+				instafeed.masonry({
+					itemSelector: 'figure',
+					// columnWidth: 400
+				})
+			});
+		}
+	});
 
-	//position of navbar
-	// var $navbar 	= $('.navbar-default');
-	// var navOffset 	= $navbar.offset().top;
-
-	// $navbar.wrap('<div class="nav-placeholder"></div>')
-	// $('.nav-placeholder').height($navbar.outerHeight()).css({'margin-bottom':'40px'});
-
-	// //calculate scroll position on page
-	// $(window).scroll(function(){
-	// 	var scrollPos = $(window).scrollTop();
-
-	// 	if(scrollPos >= navOffset){
-	// 		$navbar.addClass('fixed');
-	// 	} else {
-	// 		$navbar.removeClass('fixed');
-	// 	}
-	// });
+	feed.run();
 });
