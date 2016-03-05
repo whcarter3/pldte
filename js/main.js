@@ -71,7 +71,7 @@ $(document).ready(function(){
 			var instafeed = $('#instafeed').imagesLoaded(function(){
 				instafeed.masonry({
 					itemSelector: 'figure',
-					// columnWidth: 400
+					gutter: 10,
 				})
 			});
 		}

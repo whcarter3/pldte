@@ -1,3 +1,7 @@
+body{
+	color: white;
+}
+
 header{
 	padding-top: 2vh;
 	// height: 100vh;
@@ -14,7 +18,7 @@ header{
 }
 
 header, main{
-	background-color: white;
+	background-color: #2E2925;
 }
 
 header + main {
@@ -44,7 +48,8 @@ header + main {
 }
 
 #instafeed{
+	margin-top: 60px;
 	img{
-		// margin-bottom: 30px;
+		margin-bottom: 10px;
 	}
 }
