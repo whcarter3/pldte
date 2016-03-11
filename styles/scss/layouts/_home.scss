@@ -31,6 +31,9 @@ header + main {
 #backflip {
 	padding-top: 25vh;
 	opacity: 0;
+	@media only screen and (max-device-width: 414px){
+		padding-top: 15vh;
+	}
 }
 
 .social-nav{
@@ -47,6 +50,10 @@ header + main {
 		a{
 			color: $main-color-second;
 		}
+	}
+	@media (max-width: 414px){
+		left: auto;
+		transform: translateX(0);
 	}
 }
 
